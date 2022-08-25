@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shelter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- container for Pet shelter HTML -->
+    <div id="container">
+
+        <!-- webpage header and navigation bar -->
+        <div id="site_navbar">
+            <!-- Website logo and main options -->
+            <div class="header_of_site">
+                <div class="main_logo">
+                    <h1><img src="assets/heart-light.png" alt="website logo">Pet Shelter</h1>
+                </div>
+                <div class="header_option">
+                    <h4>Find a Pet</h4>
+                    <h4>About</h4>
+                    <button class="donate_button" onclick="removeButton(this)">Donate</button>
+                </div>
+            </div>
+            <!-- Website navigation bar menu -->
+            <div class="nav_bar">
+
+                <!-- pet selection -->
+                <div class="pet_option">
+                    <p>I'm looking for a...</p>
+                    <img src="assets/paw-light.png" alt="pet claw">
+                    <label for="pets"></label>
+                    <select name="pet_selection" id="pets" onchange="alertPet()">
+                        <option value="AnyPet">Any Pet</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                    </select>
+                </div>
+
+                <!-- Address bar -->
+                <div class="address_zip">
+                    <p>in or near...</p>
+                    <img src="assets/pin-light.png" alt="address pin">
+                    <label for="address">
+                        <input name="address" type="text" id="address" placeholder="City or Zip Code">
+                    </label>
+                </div>
+
+                <!-- button to find friend -->
+                <div>
+                    <button class="find_friend">Find your new best friend</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- rowise dispaying pets and their information -->
+        <div id="row">
+            
+            <!-- 1st pet: Pepper -->
+            <div id="row1">
+                
+                <!-- Pepper's picture and information -->
+                <div class="pet1_info">
+                    <img src="assets/pepper.jpg" alt="pet1 pic">
+                    <div class="pet1_description">
+                        <h2>Pepper</h2>
+                        <p>Pepper is a slightly shy gray tabby, but she really loves showing her human affection.</p>
+                    </div>
+                </div>
+
+                <!-- Pet Pepper and also keep the count of pettings -->
+                <div class="petting1">
+                    <p>1 petting(s)</p>
+                    <button class="petting" onclick="pettingPepper()">
+                        Pet Pepper
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2nd pet: Bruce -->
+            <div id="row2">
+
+                <!-- Bruce's picture and information -->
+                <div class="pet2_info">
+                    <img src="assets/bruce.jpg" alt="pet2 pic">
+                    <div class="pet2_description">
+                        <h2>Bruce</h2>
+                        <p>Bruce is a loyal companion. He loves long walks and cold weather.</p>
+                    </div>
+                </div>
+
+                <!-- Pet Bruce and also keep the count of pettings -->
+                <div class="petting2">
+                    <p>1 petting(s)</p>
+                    <button class="petting" onclick="pettingBruce()">
+                        Pet Bruce
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3rd pet: Oscar -->
+            <div id="row3">
+
+                <!-- Oscar's picture and information -->
+                <div class="pet3_info">
+                    <img src="assets/oscar.jpg" alt="pet3 pic">
+                    <div class="pet3_description">
+                        <h2>Oscar</h2>
+                        <p>Oscar is bright, energetic and friendly. He is looking for a good home.</p>
+                    </div>
+                </div>
+
+                <!-- Pet Oscar and also keep the count of pettings -->
+                <div class="petting3">
+                    <p onclick="">1 petting(s)</p>
+                    <button class="petting" onclick="pettingOscar()">
+                        Pet Oscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Attaching Javascript file to HTML -->
+    <script src="script.js"></script>
+</body>
+</html>
